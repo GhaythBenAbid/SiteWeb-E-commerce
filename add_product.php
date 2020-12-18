@@ -3,6 +3,10 @@
 require_once 'Connexion.php';
 session_start();
 
+if (!isset($_SESSION['id_admin'])){
+    header("location:d.php");
+}
+
 
 ?>
 
@@ -90,7 +94,6 @@ session_start();
         
         $res = $cnx->exec($sql);
 
-        echo($res);
         if ($res) {
             echo ("<h1 class='text-center'>le produit a éte bien ajouter</h1>");
         } else {

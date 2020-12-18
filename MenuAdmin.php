@@ -24,6 +24,10 @@ if (isset($_POST['id'])) {
     }
 }
 
+if (!isset($_SESSION['id_admin'])){
+    header("location:d.php");
+}
+
 ?>
 
 
@@ -75,39 +79,21 @@ if (isset($_POST['id'])) {
 
     <div class="container py-3">
         <div class="row  align-items-center">
-            <div class="col-md-6">
-                <div class="card text-white bg-primary mb-3">
-                    <div class="card-header">Ajouter</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Ajouter un Produit</h4>
-                        <a href="add_product.php" class="btn btn-secondary" role="button">Ajouter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card text-white bg-primary mb-3">
-                    <div class="card-header">Supprimer</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Supprimer un Produit</h4>
-                        <a href="delete_product.php" class="btn btn-secondary" role="button">Supprimer</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card text-white bg-primary mb-3">
-                    <div class="card-header">Rechercher</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Rechercher un Produit par reference</h4>
-                        <a href="find.php" class="btn btn-secondary" role="button">Rechercher</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="card text-white bg-primary mb-3">
                     <div class="card-header">Rechercher</div>
                     <div class="card-body">
                         <h4 class="card-title">Afficher tous les produits</h4>
                         <a href="find_all.php" class="btn btn-secondary" role="button">Afficher</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Ajouter</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Ajouter un nouveau admin</h4>
+                        <a href="AjouterAdmin.php" class="btn btn-secondary" role="button">Afficher</a>
                     </div>
                 </div>
             </div>
@@ -121,9 +107,3 @@ if (isset($_POST['id'])) {
 
 </html>
 
-<!-- 
-    Unit 5 = ex 4 ex 5
-    unit 6 ex 1 C , ex 3 Aand B, Ex 6
-    unit 7 EX 2 B 
-    Unit 8 EX 1 C , ex 6 A
--->
